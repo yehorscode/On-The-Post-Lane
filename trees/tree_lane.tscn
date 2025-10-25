@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c14m2bmhyp1kq"]
+
+[ext_resource type="Texture2D" uid="uid://dpci70vnmhh7v" path="res://images/tree/tree_lane.png" id="1_ximdf"]
+
+[node name="TreeLane" type="Sprite2D"]
+modulate = Color(1, 0.5176471, 0, 1)
+rotation = 1.6184546
+scale = Vector2(0.5072874, 0.5613504)
+texture = ExtResource("1_ximdf")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5dpewf8vot1a"]
+
+[ext_resource type="Texture2D" uid="uid://bwyn7a1c8nsxo" path="res://images/tree/tree1.png" id="1_087k8"]
+
+[node name="Tree1" type="Sprite2D"]
+modulate = Color(1.0627953, 0.51958185, 0.104183376, 1)
+texture_filter = 1
+scale = Vector2(0.35268632, 0.39838338)
+texture = ExtResource("1_087k8")
