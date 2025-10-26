@@ -7,23 +7,29 @@ extends Control
 @onready var achievement_credit_15 = $Credit_15
 @onready var achievement_kid67 = $"670"
 @onready var achievement_credit_270 = $Credit_270
-
-var original_pos: Vector2  # Store the original position for sliding back to
+@onready var in_sound = $In
+@onready var out_sound = $Out
+@onready var ping_sound = $Ping
+@onready var tip_label = $tip
+var original_pos: Vector2 
 
 func show_tooltip(toshow: String):
+	in_sound.play() 
+	
 	achievement_text.text = toshow
 	achievement_bg.visible = true
 	var tween = create_tween()
+	
 	var screen_size = get_viewport().get_visible_rect().size
 	var start_x = -screen_size.x 
 	var target_x = original_pos.x
 	achievement_bg.position.x = start_x
 	tween.tween_property(achievement_bg, "position:x", target_x, 0.5).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.tween_callback(func(): ping_sound.play())
 	tween.tween_interval(1.0)
+	tween.tween_callback(func(): out_sound.play())
 	tween.tween_property(achievement_bg, "position:x", start_x, 0.5).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	tween.finished.connect(func(): achievement_bg.visible = false)
-
-
 
 func hide_all_achievements():
 	achievement_jp2.visible = false
@@ -56,3 +62,5 @@ func _ready() -> void:
 	value_label.text = str(Global.leaves_picked_up)
 	hide_all_achievements()
 	look_for_nums(Global.leaves_picked_up)
+	
+	
