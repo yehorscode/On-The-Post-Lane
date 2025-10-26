@@ -1,6 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsr8ap1bah3dd"]
+[gd_scene load_steps=9 format=3 uid="uid://dsr8ap1bah3dd"]
 
 [ext_resource type="Script" uid="uid://qjv8x3c7p56k" path="res://scripts/ui.gd" id="1_fyqef"]
+[ext_resource type="VideoStream" uid="uid://d35tjsuw4iplw" path="res://images/autumn_eggs/jp2.ogv" id="2_m6e0p"]
+[ext_resource type="Texture2D" uid="uid://bkt7pkwwybu7g" path="res://images/autumn_eggs/credit_15.png" id="3_27fn8"]
+[ext_resource type="Texture2D" uid="uid://c1tdq3vp1dkjt" path="res://images/autumn_eggs/achievement.png" id="4_nltto"]
+[ext_resource type="FontFile" uid="uid://b3dsv6fm25ckg" path="res://fonts/minecraft_font.ttf" id="5_ibotj"]
+[ext_resource type="Texture2D" uid="uid://5j64hlmxlyyc" path="res://images/autumn_eggs/67.png" id="6_n5ude"]
+[ext_resource type="Texture2D" uid="uid://dg0nyjle0lfm" path="res://images/autumn_eggs/credit2.png" id="7_y4yjw"]
 
 [sub_resource type="GDScript" id="GDScript_m6e0p"]
 
@@ -15,18 +21,88 @@ script = ExtResource("1_fyqef")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 140.0
+offset_bottom = 31.0
 scale = Vector2(2.0806074, 2.3919766)
 text = "Leaves Picked up"
 
 [node name="Value" type="Label" parent="."]
 layout_mode = 0
-offset_left = 281.00003
-offset_top = -0.99999976
-offset_right = 321.00003
-offset_bottom = 22.0
+offset_left = 288.0
+offset_top = 7.999999
+offset_right = 328.0
+offset_bottom = 31.0
 rotation = 0.006872198
 scale = Vector2(2.2477276, 2.5610836)
 text = "00"
 script = SubResource("GDScript_m6e0p")
+
+[node name="Jp2" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 128.0
+offset_right = 506.0
+offset_bottom = 626.0
+scale = Vector2(0.09569676, 0.09569676)
+stream = ExtResource("2_m6e0p")
+autoplay = true
+loop = true
+
+[node name="Credit_15" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 64.0
+offset_right = 1608.0
+offset_bottom = 964.0
+scale = Vector2(0.061189298, 0.061189298)
+texture = ExtResource("3_27fn8")
+
+[node name="Achievement_bg" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 8.000001
+offset_top = 8.000001
+offset_right = 808.0
+offset_bottom = 168.0
+scale = Vector2(0.5275779, 0.5275779)
+texture = ExtResource("4_nltto")
+
+[node name="ColorRect" type="ColorRect" parent="Achievement_bg"]
+layout_mode = 0
+offset_left = 147.84547
+offset_top = 81.50456
+offset_right = 187.84547
+offset_bottom = 121.50456
+scale = Vector2(6.148963, 1.2328007)
+color = Color(0.12941177, 0.12941177, 0.12941177, 1)
+
+[node name="Achiv_text" type="Label" parent="Achievement_bg"]
+layout_mode = 0
+offset_left = 149.74092
+offset_top = 85.29546
+offset_right = 638.7409
+offset_bottom = 123.29546
+theme_override_fonts/font = ExtResource("5_ibotj")
+theme_override_font_sizes/font_size = 30
+text = "Achievement main text here"
+
+[node name="670" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.2784314)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 184.00002
+offset_right = 136.0
+offset_bottom = 312.0
+scale = Vector2(0.49637324, 0.49637324)
+texture = ExtResource("6_n5ude")
+
+[node name="Credit_270" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 256.0
+offset_right = 48.0
+offset_bottom = 296.0
+scale = Vector2(0.12866479, 0.12833421)
+texture = ExtResource("7_y4yjw")

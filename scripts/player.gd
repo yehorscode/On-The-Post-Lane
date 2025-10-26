@@ -29,7 +29,7 @@ func get_input():
 			if body.is_in_group("leaves"):
 				body.queue_free()
 				print("Picked up a leaf!")
-				Global.leaves_picked_up +=1
+				Global.add_leaf() 
 
 	velocity = input_direction * speed
 	
