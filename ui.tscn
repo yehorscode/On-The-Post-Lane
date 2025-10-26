@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsr8ap1bah3dd"]
+
+[ext_resource type="Script" uid="uid://qjv8x3c7p56k" path="res://scripts/ui.gd" id="1_fyqef"]
+
+[sub_resource type="GDScript" id="GDScript_m6e0p"]
+
+[node name="UI_controller" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fyqef")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(2.0806074, 2.3919766)
+text = "Leaves Picked up"
+
+[node name="Value" type="Label" parent="."]
+layout_mode = 0
+offset_left = 281.00003
+offset_top = -0.99999976
+offset_right = 321.00003
+offset_bottom = 22.0
+rotation = 0.006872198
+scale = Vector2(2.2477276, 2.5610836)
+text = "00"
+script = SubResource("GDScript_m6e0p")

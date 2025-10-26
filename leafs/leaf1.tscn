@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://chgntyiue58ot"]
+
+[ext_resource type="Texture2D" uid="uid://438epmwnhkbo" path="res://images/leaf/leaf1.png" id="1_c8rqg"]
+[ext_resource type="Script" uid="uid://c4ydcyhulfrtj" path="res://leafs/scripts/leaf_1.gd" id="1_ncy74"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c8rqg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ncy74"]
+radius = 26.5
+height = 89.94533
+
+[node name="Node2D" type="RigidBody2D"]
+mass = 0.005
+physics_material_override = SubResource("PhysicsMaterial_c8rqg")
+script = ExtResource("1_ncy74")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.12824246, 0.12824246)
+texture = ExtResource("1_c8rqg")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.12824246, 0.12824246)
+shape = SubResource("CapsuleShape2D_ncy74")
+metadata/_edit_group_ = true

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3680plkd8owu"]
+
+[ext_resource type="Script" uid="uid://cu85bxa20xce6" path="res://leafs/scripts/leaf_spawner.gd" id="1_6frc5"]
+[ext_resource type="PackedScene" uid="uid://chgntyiue58ot" path="res://leafs/leaf1.tscn" id="2_4h1ge"]
+
+[node name="Leaf Spawner" type="Node2D"]
+script = ExtResource("1_6frc5")
+leaf_scene = ExtResource("2_4h1ge")
+initial_fall_speed = Vector2(0, 1)
