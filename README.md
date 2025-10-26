@@ -5,3 +5,4 @@ Initially this was intended to be more but i didnt finish it because i reached 1
 
 Made with godot and godot tbh
 Published on itch io https://yehorscode.itch.io/on-the-post-lane
+Made with love
